@@ -48,8 +48,8 @@ public class AstroTinder {
 	JButton horoBackButton;	
 	
 	
-	JButton btnNewButton;
-	JProgressBar progressBar;
+	JButton calculateButton2;
+	JProgressBar bar;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -91,98 +91,100 @@ public class AstroTinder {
 		compBackButton.addActionListener(handler);
 		compatibilityPanel.add(compBackButton);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(100, 170, 150, 30);
-		compatibilityPanel.add(comboBox);
+		JComboBox hisDay = new JComboBox();
+		hisDay.setBounds(100, 170, 150, 30);
+		compatibilityPanel.add(hisDay);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(100, 250, 150, 30);
-		compatibilityPanel.add(comboBox_1);
+		JComboBox hisMonth = new JComboBox();
+		hisMonth.setBounds(100, 250, 150, 30);
+		compatibilityPanel.add(hisMonth);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(804, 170, 150, 30);
-		compatibilityPanel.add(comboBox_2);
+		JComboBox herDay = new JComboBox();
+		herDay.setBounds(804, 170, 150, 30);
+		compatibilityPanel.add(herDay);
 		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setBounds(804, 250, 150, 30);
-		compatibilityPanel.add(comboBox_3);
+		JComboBox herMonth = new JComboBox();
+		herMonth.setBounds(804, 250, 150, 30);
+		compatibilityPanel.add(herMonth);
 		
-		btnNewButton = new JButton("New button");
-		btnNewButton.setBounds((int)((Panel.PANEL_WIDTH - 180)/2), 494, 180, 40);
-		btnNewButton.addActionListener(handler);;
-		compatibilityPanel.add(btnNewButton);
+		calculateButton2 = new JButton("Calculate");
+		calculateButton2.setFont(new Font("Times New Roman", Font.BOLD, 24));
+		calculateButton2.setBounds((int)((Panel.PANEL_WIDTH - 180)/2), 494, 180, 40);
+		calculateButton2.addActionListener(handler);;
+		compatibilityPanel.add(calculateButton2);
 		
-		JLabel lblNewLabel = new JLabel("Select his birthday:");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel.setBounds(100, 100, 170, 25);
-		compatibilityPanel.add(lblNewLabel);
+		JLabel hisBLabel = new JLabel("Select his birthday:");
+		hisBLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		hisBLabel.setBounds(100, 100, 170, 25);
+		compatibilityPanel.add(hisBLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Day");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_1.setBounds(100, 140, 50, 25);
-		compatibilityPanel.add(lblNewLabel_1);
+		JLabel hisDLabel = new JLabel("Day");
+		hisDLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		hisDLabel.setBounds(100, 140, 50, 25);
+		compatibilityPanel.add(hisDLabel);
 		
-		JLabel lblNewLabel_2 = new JLabel("Month");
-		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_2.setBounds(100, 220, 80, 25);
-		compatibilityPanel.add(lblNewLabel_2);
+		JLabel hisMLabel = new JLabel("Month");
+		hisMLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		hisMLabel.setBounds(100, 220, 80, 25);
+		compatibilityPanel.add(hisMLabel);
 		
-		JLabel lblNewLabel_3 = new JLabel("His sign is:");
-		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_3.setBounds(100, 335, 100, 25);
-		compatibilityPanel.add(lblNewLabel_3);
+		JLabel hisSILabel = new JLabel("His sign is:");
+		hisSILabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		hisSILabel.setBounds(100, 335, 100, 25);
+		compatibilityPanel.add(hisSILabel);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_4.setBounds(200, 335, 100, 25);
 		compatibilityPanel.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("HisImage");
-		lblNewLabel_5.setBounds(100, 390, 100, 100);
-		compatibilityPanel.add(lblNewLabel_5);
+		JLabel hisImage = new JLabel("HisImage");
+		hisImage.setBounds(100, 390, 100, 100);
+		compatibilityPanel.add(hisImage);
 		
-		JLabel lblNewLabel_6 = new JLabel("Select her birthday:");
-		lblNewLabel_6.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_6.setBounds(804, 100, 170, 25);
-		compatibilityPanel.add(lblNewLabel_6);
+		JLabel herBLabel = new JLabel("Select her birthday:");
+		herBLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		herBLabel.setBounds(804, 100, 170, 25);
+		compatibilityPanel.add(herBLabel);
 		
-		JLabel lblNewLabel_7 = new JLabel("Day");
-		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_7.setBounds(804, 140, 50, 25);
-		compatibilityPanel.add(lblNewLabel_7);
+		JLabel herDLabel = new JLabel("Day");
+		herDLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		herDLabel.setBounds(804, 140, 50, 25);
+		compatibilityPanel.add(herDLabel);
 		
-		JLabel lblNewLabel_8 = new JLabel("Month");
-		lblNewLabel_8.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_8.setBounds(804, 220, 80, 25);
-		compatibilityPanel.add(lblNewLabel_8);
+		JLabel herMLabel = new JLabel("Month");
+		herMLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		herMLabel.setBounds(804, 220, 80, 25);
+		compatibilityPanel.add(herMLabel);
 		
-		JLabel lblNewLabel_9 = new JLabel("Her sign is:");
-		lblNewLabel_9.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_9.setBounds(804, 335, 100, 25);
-		compatibilityPanel.add(lblNewLabel_9);
+		JLabel herSILabel = new JLabel("Her sign is:");
+		herSILabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		herSILabel.setBounds(804, 335, 100, 25);
+		compatibilityPanel.add(herSILabel);
 		
-		JLabel lblNewLabel_10 = new JLabel("herImage");
-		lblNewLabel_10.setBounds(804, 390, 100, 100);
-		compatibilityPanel.add(lblNewLabel_10);
+		JLabel herImage = new JLabel("herImage");
+		herImage.setBounds(804, 390, 100, 100);
+		compatibilityPanel.add(herImage);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(300, 120, 474, 280);
 		compatibilityPanel.add(scrollPane_1);
 		
 		JTextArea textArea_1 = new JTextArea();
+		textArea_1.setEditable(false);
 		textArea_1.setLineWrap(true);
 		scrollPane_1.setViewportView(textArea_1);
 		
-		progressBar = new JProgressBar();
-		progressBar.setForeground(Color.PINK);
-		progressBar.setStringPainted(true);
-		progressBar.setBounds(474, 420, 300, 30);
-		compatibilityPanel.add(progressBar);
+		bar = new JProgressBar();
+		bar.setForeground(Color.PINK);
+		bar.setStringPainted(true);
+		bar.setBounds(474, 420, 300, 30);
+		compatibilityPanel.add(bar);
 		
-		JLabel lblNewLabel_11 = new JLabel("You are compatible:");
-		lblNewLabel_11.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_11.setBounds(300, 425, 170, 25);
-		compatibilityPanel.add(lblNewLabel_11);
+		JLabel yacLabel = new JLabel("You are compatible:");
+		yacLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		yacLabel.setBounds(300, 425, 170, 25);
+		compatibilityPanel.add(yacLabel);
 		
 		horoscopePanel = new HoroscopePanel();
 		frame.getContentPane().add(horoscopePanel);		
@@ -352,14 +354,14 @@ public class AstroTinder {
 				menuPanel.setVisible(true);
 				horoscopePanel.setVisible(false);
 			}
-			if(e.getSource() == btnNewButton){
+			if(e.getSource() == calculateButton2){
 				new Thread(new Runnable(){
 					@Override
 					public void run() {
 						int x = 0;
 						while(x <= 100){
 							x++;
-							progressBar.setValue(x);
+							bar.setValue(x);
 							try {
 								Thread.sleep(50);
 							} catch (InterruptedException e) {
