@@ -2,6 +2,7 @@ package Panels;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public abstract class Panel extends JPanel{
 
 	public static final int PANEL_WIDTH = 1074;

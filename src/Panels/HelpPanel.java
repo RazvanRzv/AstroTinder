@@ -1,13 +1,12 @@
 package Panels;
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
+import javax.swing.JTextArea;
 
 @SuppressWarnings("serial")
 public class HelpPanel extends Panel{
+	
+	private JTextArea helpTextArea;
 	
 	public HelpPanel(){
 		super();
@@ -16,7 +15,17 @@ public class HelpPanel extends Panel{
 
 	@Override
 	public void init() {
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.YELLOW);
+		
+		helpTextArea = new JTextArea();
+		helpTextArea.setText("asdwwq");
+		helpTextArea.setBounds(73, 38, 816, 289);
+		helpTextArea.setLineWrap(true);
+		helpTextArea.setOpaque(false);
+		helpTextArea.setEditable(false);
+		
+		this.add(helpTextArea);
+
 	}
 
 }
