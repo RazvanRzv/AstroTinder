@@ -50,7 +50,7 @@ public class Sign {
 		if ((day >= 21 && month == 3) || (day <= 20 && month == 4)) {
 			return "Aries";
 		}
-		if ((day >= 21 && month == 3) || (day <= 21 && month == 5)) {
+		if ((day >= 21 && month == 4) || (day <= 21 && month == 5)) {
 			return "Taurus";
 		}
 		if ((day >= 22 && month == 5) || (day <= 21 && month == 6)) {
